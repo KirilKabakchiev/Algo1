@@ -2,7 +2,7 @@ package algo.palindromes;
 
 public class Palindromes {
 
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         int n = s.length();
         for (int i = 0; i < (n / 2) + 1; ++i) {
             if (s.charAt(i) != s.charAt(n - i - 1)) {
@@ -13,7 +13,7 @@ public class Palindromes {
         return true;
     }
 
-    public void printPalindromicRotations(String s) throws IllegalArgumentException {
+    public static void printPalindromicRotations(String s) throws IllegalArgumentException {
 
         int n = s.length();
         boolean flag = false;
@@ -48,13 +48,11 @@ public class Palindromes {
     }
 
     public static void main(String[] args) {
-        // hellohello
-        // elloh
-        // llohe
-        // lohel
-        // ohell
-
-       // System.out.println(new Palindromes().isPalindrome("wakaakaw"));
-        new Palindromes().printPalindromicRotations("shakira");
+        
+        printPalindromicRotations("labalaa");
+        System.out.println();
+        printPalindromicRotations("akawwaka");
+        System.out.println();
+        printPalindromicRotations("shakira");
     }
 }

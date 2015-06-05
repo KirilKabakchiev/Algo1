@@ -2,8 +2,6 @@ package algo.brackets;
 
 import java.util.Stack;
 
-import org.omg.CORBA.Current;
-
 public class Brackets {
     public static boolean checkParentesis(String str) {
         if (str.isEmpty())
@@ -67,7 +65,7 @@ public class Brackets {
     
     public static int evaluate(String s){
         
-        int sum = 0, part = 0, i = 0, number = 0, result = 0;
+        int sum = 0, i = 0, number = 0, result = 0;
         Stack<String> stack = new Stack<>();
         for(i = 0; i < s.length(); i++) {
             char current = s.charAt(i);
