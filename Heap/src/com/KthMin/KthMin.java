@@ -1,4 +1,4 @@
-package KthMin;
+package com.KthMin;
 
 import java.util.ArrayList;
 import java.util.List;
