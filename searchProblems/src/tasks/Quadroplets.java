@@ -68,6 +68,22 @@ public class Quadroplets {
 		}
 		return res;
 	}
+	
+	public int zero_quadruplets_count_simple(Integer[] a, Integer[] b, Integer[] c,
+			Integer[] d) {
+		Arrays.sort(d);
+		int count = 0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				for (int t = 0; t < c.length; t++) {
+					if (Arrays.binarySearch(d, -(a[i] + b[j] + c[t])) >= 0) {
+						count++;
+					}
+				}
+			}
+		}
+		return count;
+	}
 
 	public static void main(String[] args) {
 		int[] array = { 1, 2, 3, 4, -6 };
